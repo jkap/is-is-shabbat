@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://newcss.net/lite.css">
+    <link rel="stylesheet" href="https://newcss.net/theme/night.css">
+  </head>
+  <body>
+    <h1>is it shabbat?</h1>
+    <h2>no!</h2>
+    <p>
+      this website will load upcoming shabbat candle lighting and havdalah times in oakland, california, when
+      it is not yet shabbat. if it is currently shabbat, this website will not
+      respond.
+    </p>
+    <div>
+      <ul>
+        <li><b>shabbat starts:</b> <%= moment(shabbatData.startDate).tz('America/Los_Angeles').format("llll z") %></li>
+        <li><b>shabbat ends:</b> <%= moment(shabbatData.endDate).tz('America/Los_Angeles').format("llll z") %></li>
+      </ul>
+    </div>
+    <p>
+      developed by <a href="https://twitter.com/jkap">jae kaplan</a>, read more about <a href="">how it works</a>.
+    </p>
+    <p>
+      data from <a href="https://www.hebcal.com">hebcal.com</a>
+    </p>
+  </body>
+</html>
